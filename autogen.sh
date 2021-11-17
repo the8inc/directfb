@@ -142,6 +142,6 @@ automake -Wno-portability --add-missing $am_opt
 cd $ORIGDIR
 
 echo Running configure --enable-maintainer-mode "$@" ...
-$srcdir/configure --enable-maintainer-mode "$@" || exit 1
+$srcdir/configure --prefix=/usr --enable-mesa=yes --enable-x11=no --enable-egl=no --enable-jpeg=yes --enable-zlib=yes --enable-png=yes --enable-tiff=yes --enable-freetype=yes --with-gfxdrivers=gles2 "$@" || exit 1
 
 echo "Now type 'make' to compile $PROJECT."
